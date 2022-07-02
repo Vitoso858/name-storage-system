@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 20rem;
+  background-color: gray;
+  padding: 10px;
+}
+
+.descricao {
+  padding: 5px;
+  background-color: gray;
+  color: white;
+  font-weight: 700;
+}
+
+button {
+  width: 150px;
+  margin-left: 5px;
+  background-color: lightgray;
+  color: black;
+  font-weight: 700;
+  border: none;
+}
+.inserir {
+  padding: 3px;
+  background-color: lightgray;
+  border: none;
+  width: 82%;
+}
+
+.enviar {
+  border: none;
+  padding: 4px;
+  font-size: 20px;
+  background-color: lightgray;
+  color: black;
+  font-weight: 700;
+}
+
+.resultados {
+  color: white;
+  padding: 3px;
+  background-color: gray;
+  font-weight: 700;
+}
+
+.nomes {
+  color: white;
+  padding: 3px;
+  background-color: gray;
+  font-weight: 700;
+  list-style-type: none;
+}
+
+button:disabled {
+  color: gray;
+}
+.enviar:disabled {
+  color: gray;
+}
