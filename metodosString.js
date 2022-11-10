@@ -2,7 +2,7 @@ let form = document.querySelector(".wrapper");
 let nome = document.querySelector(".inserir");
 let mostraNomes = document.querySelector(".nomes");
 let btn = document.querySelector(".enviar");
-let resultadosDaBusca = document.querySelector(".resultados");
+let resultadosDaBusca = document.querySelector(".resultados"), lista = document.querySelector('resultList'), p;
 let mostraRes;
 let reset;
 let item;
@@ -10,19 +10,21 @@ let incluir;
 let nomes = [];
 let nomesRes = [];
 
-function filtroNomes() {
-  for (let i = 0; i < nomes.length; i++) {
-    if (nomes[i].indexOf(nome.value) === 0) {
-      nomesRes.push(nomes[i]);
-    }
-  }
 
-  if (nomesRes.length !== 0) {
+function filtroNomes() {
+ nomes.push(nome.value)
+  p = document.createElement('p')
+  p.textContent = nome.value
+  lista.appendChild(p)
+  
+//nomes estão amarzendaos em nomesRes
+  
+  /*if (nomesRes.length !== 0) {
     resultadosDaBusca.textContent = `Há no nosso sistema ${nomesRes.length} ocorrências para essa entrada`;
 
     nome.disabled = true;
     btn.disabled = true;
-
+*/
     reset = document.createElement("button");
     reset.textContent = "Realizar nova busca";
     form.appendChild(reset);
